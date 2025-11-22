@@ -108,7 +108,8 @@ class HistoryWindow(QWidget):
             ("TRX", "$800", "Buy", "$0.05", "16000.0", "2024-04-13"),
             ("BNB", "$900", "Sell", "$300", "3.0", "2024-04-14"),
             ("XLM", "$1000", "Buy", "$0.1", "10000.0", "2024-04-15"),
-            ("AVAX", "$1100", "Sell", "$50", "22.0", "2024-04-16"), ("MATIC", "$500", "Sell", "$2", "250.0", "2024-04-10"),
+            ("AVAX", "$1100", "Sell", "$50", "22.0", "2024-04-16"), 
+            ("MATIC", "$500", "Sell", "$2", "250.0", "2024-04-10"),
             ("DOGE", "$600", "Buy", "$0.1", "6000.0", "2024-04-11"),
             ("SHIB", "$700", "Sell", "$0.00001", "70000000.0", "2024-04-12"),
             ("TRX", "$800", "Buy", "$0.05", "16000.0", "2024-04-13"),
@@ -153,8 +154,6 @@ class HistoryWindow(QWidget):
             if any(text in str(cell).lower() for cell in row):
                 filtered.append(row)
         self.populate_table(filtered)
-
-
 
 # дата и время должны автоматически подставляться
 # добавить метод который будет выбирать иконки
@@ -260,9 +259,6 @@ class AddTokenWindow(QWidget):
             self.sell_button.setChecked(True)
             self.selected_action = "Sell"
     
-
-
-
 
 class AddTokenListWindow(QWidget):
     def __init__(self):
@@ -410,11 +406,6 @@ class AddTokenListWindow(QWidget):
     #     self.token_window.show()
 
 
-
-
-
-
-
 class NotificationWindow(QWidget):
     def __init__(self):
         super().__init__()
@@ -478,9 +469,6 @@ class NotificationWindow(QWidget):
 
         self.setLayout(main_notification_layout)
         
-
-
-
 
 class PortfolioApp(QMainWindow):
     def __init__(self):
